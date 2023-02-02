@@ -1,11 +1,13 @@
 <div class="container">
-  <h1>Add Check</h1>
+  <card>
+    <h1 class="title">Add Check</h1>
 
-  <form action="" [formGroup]="form" (submit)="handleSubmit()">
-    <text-input
-      [control]="form.controls.productName"
-      [placeholder]="'Enter product name'"
-      [label]="'Product name'"
-    ></text-input>
-  </form>
+    <form action="" [formGroup]="form" (submit)="handleSubmit()">
+      <text-input
+        [control]="form.controls.productName"
+        [placeholder]="'Enter product name'"
+        [label]="'Product name'"
+      ></text-input>
+    </form>
+  </card>
 </div>
