@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TextInputModule } from 'src/app/components/text-input/text-input.module';
 import { CardModule } from 'src/app/components/card/card.module';
+import { NumericInputModule } from 'src/app/components/numeric-input/numeric-input.module';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     TextInputModule,
     CardModule,
+    NumericInputModule,
   ],
 })
 export class AddCheckPageModule {}

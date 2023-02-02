@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AddCheckPageComponent {
   public readonly form = new FormGroup({
     productName: new FormControl('', [Validators.required]),
+    productPrice: new FormControl(null, [Validators.required]),
   });
 
   public handleSubmit(): void {
