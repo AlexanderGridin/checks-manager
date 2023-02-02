@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add Check</h1>
+
+  <form action="" [formGroup]="form" (submit)="handleSubmit()">
+    <text-input
+      [control]="form.controls.productName"
+      [placeholder]="'Enter product name'"
+      [label]="'Product name'"
+    ></text-input>
+  </form>
+</div>
