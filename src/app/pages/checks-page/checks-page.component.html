@@ -1,1 +1,23 @@
-<h1>Checks page</h1>
+<page-layout [isLoading]="isLoading">
+  <div class="header">
+    <h1 class="title">Поиск чеков</h1>
+
+    <span class="sub-title"
+      >всего в системе: {{ totalChecks }} <br />
+      найдено: {{ checks.length }} <br />
+      на сумму: {{ totalAmount }} грн.</span
+    >
+
+    <checks-search (onSubmit)="handleSearchSubmit($event)"></checks-search>
+  </div>
+
+  <ng-container *ngIf="checks.length">
+    <ng-container *ngFor="let check of checks">
+      <div class="cell">
+        <card>
+          <check [check]="check"></check>
+        </card>
+      </div>
+    </ng-container>
+  </ng-container>
+</page-layout>
