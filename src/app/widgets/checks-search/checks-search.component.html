@@ -1,0 +1,15 @@
+<form class="checks-form" [formGroup]="form" (submit)="handleSubmit()">
+  <date-picker
+    [control]="form.controls.start"
+    placeholder="Начальная дата"
+    label="Начальная дата"
+  ></date-picker>
+
+  <date-picker
+    [control]="form.controls.end"
+    placeholder="Конечная дата"
+    label="Конечная дата"
+  ></date-picker>
+
+  <button type="submit" class="search-button">Поиск</button>
+</form>
