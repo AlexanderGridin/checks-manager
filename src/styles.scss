@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #2e3440;
+  width: 100%;
+  height: 100%;
+}
+
+.mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle,
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+  stroke: #5e81ac !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}

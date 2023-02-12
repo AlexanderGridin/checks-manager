@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  color: #fff;
+  margin: 0;
+  margin-bottom: 7px;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-title {
+  margin-bottom: 25px;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+}
+
+.cell {
+  width: 750px;
+  margin: auto;
+}
+
+.cell:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+button:hover {
+  cursor: pointer;
+}

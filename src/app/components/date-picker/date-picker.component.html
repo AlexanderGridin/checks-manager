@@ -1,0 +1,13 @@
+<mat-form-field class="container" appearance="fill">
+  <mat-label *ngIf="label">{{ label }}</mat-label>
+
+  <input
+    [formControl]="control"
+    [placeholder]="placeholder"
+    matInput
+    [matDatepicker]="picker"
+  />
+
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>

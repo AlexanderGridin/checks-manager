@@ -1,0 +1,81 @@
+<div class="wrapper">
+  <div class="container">
+    <card class="card">
+      <h1 class="title">Добавить чек</h1>
+
+      <form action="" [formGroup]="form" (submit)="handleSubmit()">
+        <div class="control">
+          <date-picker
+            [control]="form.controls.checkDate"
+            placeholder="Дата"
+            label="Дата"
+          ></date-picker>
+        </div>
+
+        <div class="control">
+          <single-select
+            [data]="stores"
+            [control]="form.controls.store"
+            label="Магазин"
+          ></single-select>
+        </div>
+
+        <div class="products-controls-container">
+          <div class="legend">
+            <span>Название товара</span>--<span>вес</span>--<span
+              >единицы веса</span
+            >--<span>количество (хN)</span>--<span>Дополнительная инф-я </span>
+          </div>
+          <div
+            class="product-controls"
+            *ngFor="
+              let productForm of $any(productsFormArray).controls;
+              let i = index
+            "
+          >
+            <div class="cell">
+              <text-input
+                [control]="productForm.get('productName')"
+                placeholder="Название товара"
+                label="Название товара"
+              ></text-input>
+            </div>
+
+            <div class="cell">
+              <numeric-input
+                [control]="productForm.get('productPrice')"
+                placeholder="00.00"
+                label="Стоимость"
+              ></numeric-input>
+            </div>
+
+            <div class="cell">
+              <button
+                *ngIf="totalProducts !== i + 1"
+                class="remove-product-button"
+                type="button"
+                (click)="removeProductFormGroup(i)"
+              >
+                -
+              </button>
+
+              <button
+                *ngIf="totalProducts === i + 1"
+                class="add-product-button"
+                type="button"
+                (click)="addProductFormGroup()"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="total">
+            Итого: <b>{{ totalAmount }} грн.</b>
+          </div>
+        </div>
+        <button class="save-check-button" type="submit">Добавить чек</button>
+      </form>
+    </card>
+  </div>
+</div>
