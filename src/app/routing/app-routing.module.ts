@@ -5,6 +5,7 @@ const routes: Routes = [
   {
     title: 'Checks',
     path: '',
+    pathMatch: 'full',
     loadChildren: () =>
       import('../pages/checks-page/checks-page.module').then(
         (m) => m.ChecksPageModule

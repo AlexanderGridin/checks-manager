@@ -1,1 +1,21 @@
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-list-item">
+      <a
+        [routerLink]="'/'"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Найти чеки</a
+      >
+    </li>
+    <li class="nav-list-item">
+      <a
+        [routerLink]="'add-check'"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Добавить чек</a
+      >
+    </li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>

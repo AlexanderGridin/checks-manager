@@ -1,0 +1,29 @@
+.nav {
+  background-color: #434c5e;
+  padding: 15px 35px;
+}
+
+.nav-list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.nav-list-item a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.nav-list-item a:hover,
+.nav-list-item a.active {
+  background-color: #5e81ac;
+}
