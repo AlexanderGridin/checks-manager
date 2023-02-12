@@ -1,0 +1,8 @@
+<ng-container *ngIf="product">
+  <div class="product">
+    <div class="product-name">{{ product.productName }}</div>
+    <div class="product-price">
+      {{ product.productPrice | currency: "UAH " }}
+    </div>
+  </div>
+</ng-container>

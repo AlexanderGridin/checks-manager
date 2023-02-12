@@ -1,0 +1,17 @@
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #eceff4;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  padding-right: 15px;
+}
+
+.product-price {
+  font-weight: bold;
+}
