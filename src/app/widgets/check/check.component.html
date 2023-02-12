@@ -1,0 +1,23 @@
+<ng-container *ngIf="check">
+  <div class="check__header">
+    <h2 class="check__title">{{ check.store }}</h2>
+    <span class="check__id">{{ check.id }}</span>
+    <!-- <button class="remove-button" (click)="removeCheck()"> -->
+    <!--   Удалить -->
+    <!-- </button> -->
+  </div>
+  <p>
+    <i>{{ check.checkDate | date: "dd.MM.YYY - EEEE" }}</i>
+  </p>
+
+  <ng-container *ngFor="let product of check.products">
+    <product [product]="product"></product>
+  </ng-container>
+
+  <div class="check__footer">
+    <div>ИТОГО:</div>
+    <div class="check-total">
+      {{ check.products | productsTotal | currency: "UAH " }}
+    </div>
+  </div>
+</ng-container>
